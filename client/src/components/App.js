@@ -5,6 +5,7 @@ import * as actions from '../actions';
 
 import Header from './Header';
 import ClientList from './client/ClientList';
+import ClientForm from './client/ClientForm';
 
 class App extends Component {
 
@@ -17,11 +18,10 @@ class App extends Component {
       <div className="container">
         <BrowserRouter>
           <div>
-            {/* <Header /> */}
+            <Header />
             <Switch>
-              {/* <Route path="/candidate/new" component={CandidateForm} />
-              <Route path="/candidate/experience/:_id?" component={ExperienceForm} />
-              <Route exact path="/candidate/:_id" component={CandidateForm} /> */}
+
+              <Route path="/newclient" component={ClientForm} />
               <Route path="/" component={ClientList} />
             </Switch>
           </div>

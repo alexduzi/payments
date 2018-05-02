@@ -10,16 +10,16 @@ const create = (baseURL = process.env.REACT_APP_PAYMENT_API_URL) => {
     timeout: 10000
   })
 
-  const insertPayment = (payment) => api.post('payment', { ...payment });
+  const insertCard = (card) => api.post('card', { ...card });
 
-  const updatePayment = (payment) => api.put(`payment/${payment._id}`, { ...payment });
+  const updateCard = (card) => api.put(`card/${card._id}`, { ...card });
 
-  const deletePayment = (id) => api.delete(`payment/${id}`);
+  const deleteCard = (id) => api.delete(`card/${id}`);
 
   return {
-    insertPayment,
-    updatePayment,
-    deletePayment
+    insertCard,
+    updateCard,
+    deleteCard
   };
 }
 
